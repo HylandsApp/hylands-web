@@ -64,7 +64,7 @@
 
         // when the websocket connection opens, you might display a message.
         ws.onopen = () => {
-            terminal?.write('\r\nConnected to MUD server!\r\n')
+            terminal?.write('\r\nConnected to Hylands!\r\n')
         }
 
         // write data received from the mud server to the terminal.
