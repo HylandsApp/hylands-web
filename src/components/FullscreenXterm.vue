@@ -41,7 +41,35 @@
         terminal = new Terminal({
             cursorBlink: true,
             // rows: 40, // optional: override default size if needed
-            scrollback: 1000
+            scrollback: 1000,
+            fontFamily: 'ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace',
+            // fontFamily: 'PixelifySans',
+            // fontFamily: 'Adventurer',
+            // fontFamily: 'OpenDyslexicMono',
+            // lineHeight: 0,
+            // letterSpacing: 0,
+            fontSize: 16,
+            fontWeight: 400,
+            fontWeightBold: 700,
+            allowTransparency: true,
+            // convertEol: true,
+            cursorStyle: 'bar',
+            cursorInactiveStyle: 'bar',
+            cursorWidth: 3,
+            drawBoldTextInBrightColors: true,
+            // logLevel: 1,
+            minimumContrastRatio: 1,
+            // screenReaderMode: true,
+            // tabStopWidth: 0,
+            theme: {
+                background: '#00000000',
+                cursor: '#ff0000',
+                // cursorAccent: '#0000ff',
+                foreground: '#00ff00',
+                selectionBackground: '#ff0000',
+                selectionForeground: '#0000ff',
+                // selectionInactiveBackground: '#ff0000',
+            }
         })
         
         // create and load the fit addon for responsive sizing.

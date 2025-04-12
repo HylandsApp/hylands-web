@@ -1,3 +1,53 @@
+@font-face {
+  font-family: 'JetBrainsMono';
+  src: url('./fonts/JetBrainsMono[wght].ttf') format('truetype');
+}
+.jetbrains-mono {
+  font-family: 'JetBrainsMono', monospace;
+}
+@font-face {
+  font-family: 'JetBrainsMono-Italic';
+  src: url('./fonts/JetBrainsMono-Italic[wght].ttf') format('truetype');
+}
+.jetbrains-mono-italic {
+  font-family: 'JetBrainsMono-Italic', monospace;
+}
+@font-face {
+  font-family: 'Adventurer';
+  src: url('./fonts/Adventurer.ttf') format('truetype');
+}
+.adventurer {
+  font-family: 'Adventurer', monospace;
+}
+@font-face {
+  font-family: 'PixelifySans';
+  src: url('./fonts/PixelifySans-VariableFont_wght.ttf') format('truetype');
+}
+.pixelify-sans {
+  font-family: 'PixelifySans', monospace;
+}
+@font-face {
+  font-family: 'OpenDyslexic3';
+  src: url('./fonts/OpenDyslexic3-Regular.ttf') format('truetype');
+}
+.open-dyslexic3 {
+  font-family: 'OpenDyslexic3', monospace;
+}
+@font-face {
+  font-family: 'OpenDyslexic3-Bold';
+  src: url('./fonts/OpenDyslexic3-Bold.ttf') format('truetype');
+}
+.open-dyslexic3-bold {
+  font-family: 'OpenDyslexic3-Bold', monospace;
+}
+@font-face {
+  font-family: 'OpenDyslexicMono';
+  src: url('./fonts/OpenDyslexicMono-Regular.otf') format('opentype');
+}
+.open-dyslexic-mono {
+  font-family: 'OpenDyslexicMono', monospace;
+}
+
 /* color palette from <https://github.com/vuejs/theme> */
 /* :root {
   --vt-c-white: #ffffff;
@@ -60,7 +110,8 @@
 
 html {
   overflow: hidden;
-  background-color: #000;
+  /* background-color: blue; */
+  background: linear-gradient(to bottom, red, blue);
   color: #fff;
 }
 

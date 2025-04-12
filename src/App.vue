@@ -3,7 +3,7 @@
   <!-- header -->
   <header>
 
-    <h1 style="margin: 0; padding: 0;">Hylands <span style="font-size: 0.875rem;">A NeoMUD</span></h1>
+    <h1 class="adventurer" style="margin: 0; padding: 0; opacity: 0.75;">Hylands <span class="adventurer" style="font-size: 0.875rem;">A NeoMUD</span></h1>
 
   </header>
 
@@ -13,7 +13,7 @@
   <!-- footer -->
   <footer>
 
-    &copy; 2025 Hylands.app
+    <span class="adventurer" style="font-size: 0.75rem; opacity: 0.75;">&copy; 2025 Hylands.app</span>
 
   </footer>
 

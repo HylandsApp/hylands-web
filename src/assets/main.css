@@ -6,7 +6,16 @@
   height: 100vh;
   justify-content: space-between;
   overflow: hidden;
+  /* font-family: 'ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace'; */
 }
+
+/* h1, h2, h3, h4, h5, h6 {
+  font-family: 'ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace';
+}
+
+p, span, div {
+  font-family: 'ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace';
+} */
 
 a {
   /* placeholder */
