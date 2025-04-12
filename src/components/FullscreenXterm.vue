@@ -39,7 +39,6 @@
         
         // create a new terminal instance
         terminal = new Terminal({
-            cursorBlink: true,
             // rows: 40, // optional: override default size if needed
             scrollback: 1000,
             fontFamily: 'ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace',
@@ -56,6 +55,7 @@
             cursorStyle: 'bar',
             cursorInactiveStyle: 'bar',
             cursorWidth: 3,
+            cursorBlink: true,
             drawBoldTextInBrightColors: true,
             // logLevel: 1,
             minimumContrastRatio: 1,
@@ -63,11 +63,11 @@
             // tabStopWidth: 0,
             theme: {
                 background: '#00000000',
-                cursor: '#ff0000',
+                cursor: '#ffffff',
                 // cursorAccent: '#0000ff',
-                foreground: '#00ff00',
-                selectionBackground: '#ff0000',
-                selectionForeground: '#0000ff',
+                foreground: '#ffffff',
+                selectionBackground: '#00ff00',
+                selectionForeground: '#000000',
                 // selectionInactiveBackground: '#ff0000',
             }
         })

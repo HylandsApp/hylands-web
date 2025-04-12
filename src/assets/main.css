@@ -6,6 +6,7 @@
   height: 100vh;
   justify-content: space-between;
   overflow: hidden;
+  position: relative;
   /* font-family: 'ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas, Liberation Mono, monospace'; */
 }
 
