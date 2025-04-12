@@ -30,6 +30,9 @@
     let fitAddon: FitAddon | null = null
     let ws: WebSocket | null = null
     let inputBuffer = ''
+    let commandHistory: string[] = []
+    let historyIndex = -1
+    let currentInput = ''
 
     // initialize the terminal
     const initializeTerminal = () => {
@@ -124,12 +127,35 @@
             if (data === '\r' || data === '\n') {
                 if (ws?.readyState === WebSocket.OPEN) {
                     ws.send(inputBuffer + '\r\n')
+                    if (inputBuffer.trim()) {
+                        commandHistory.push(inputBuffer)
+                        historyIndex = commandHistory.length
+                    }
                     inputBuffer = ''
                 }
             } else if (data.charCodeAt(0) === 127) { // backspace
                 if (inputBuffer.length > 0) {
                     inputBuffer = inputBuffer.slice(0, -1)
                     terminal?.write('\b \b')
+                }
+            } else if (data === '\x1b[A') { // up arrow
+                if (historyIndex > 0) {
+                    historyIndex--
+                    if (historyIndex === commandHistory.length - 1) {
+                        currentInput = inputBuffer
+                    }
+                    inputBuffer = commandHistory[historyIndex]
+                    terminal?.write('\r\x1b[K' + inputBuffer)
+                }
+            } else if (data === '\x1b[B') { // down arrow
+                if (historyIndex < commandHistory.length - 1) {
+                    historyIndex++
+                    inputBuffer = commandHistory[historyIndex]
+                    terminal?.write('\r\x1b[K' + inputBuffer)
+                } else if (historyIndex === commandHistory.length - 1) {
+                    historyIndex++
+                    inputBuffer = currentInput
+                    terminal?.write('\r\x1b[K' + inputBuffer)
                 }
             } else {
                 inputBuffer += data
