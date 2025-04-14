@@ -103,11 +103,11 @@
             try {
                 const data = JSON.parse(event.data)
                 if (data.type === 'message' && data.message) {
-                    terminal?.write(data.message + '\r\n')
+                    terminal?.write('\r\n' + data.message + '\r\n')
                 }
             } catch (e) {
                 // if it's not JSON, write it directly
-                terminal?.write(event.data + '\r\n')
+                terminal?.write('\r\n' + event.data + '\r\n')
             }
         }
 
